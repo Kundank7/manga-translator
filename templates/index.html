@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Manga Translator</title>
+</head>
+<body>
+  <h1>Manga Translator Tool</h1>
+  <form method="post">
+    <label>Enter Manga Image URL:</label>
+    <input type="text" name="image_url" required>
+    <button type="submit">Translate</button>
+  </form>
+
+  {% if image_path %}
+    <h2>Original Image</h2>
+    <img src="{{ image_path }}" width="400">
+  {% endif %}
+
+  {% if translated_text %}
+    <h2>Translated Text</h2>
+    <p>{{ translated_text }}</p>
+  {% endif %}
+</body>
+</html>
